@@ -1,0 +1,14 @@
+x-logging:
+  &logging
+  logging:
+    options:
+      max-size: 50m
+      max-file: "3"
+
+services:
+  nexus:
+    image: nexusxyz/nexus-cli:${NEXUS_VERSION}
+    container_name: nexus
+    command: ["start", "--headless", "--node-id", "${NODE_ID}"]
+    restart: always
+    <<: *logging
