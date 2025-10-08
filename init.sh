@@ -1,3 +1,3 @@
 #!/bin/bash
 
-curl -s https://raw.githubusercontent.com/LexPrime/tools/main/get-docker.sh
+curl -fsSL https://raw.githubusercontent.com/scripts/get-docker.sh | bash
