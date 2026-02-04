@@ -7,7 +7,9 @@ x-logging:
 
 services:
   nexus:
-    image: nexusxyz/nexus-cli:${NEXUS_VERSION}
+    build: .
+    image: nexusxyz/nexus-cli:local
+    #image: nexusxyz/nexus-cli:${NEXUS_VERSION}
     container_name: nexus
     command: ["start", "--headless", "--node-id", "${NODE_ID}"]
     restart: always
